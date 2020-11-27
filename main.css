@@ -1,0 +1,102 @@
+@font-face {
+	font-family: 'DancingScript';
+	src: url('DancingScript.woff2') format('woff2 supports variations'), url('DancingScript.woff2') format('woff2-variations');
+	font-weight: 100 1000;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway.woff2') format('woff2 supports variations'), url('Raleway.woff2') format('woff2-variations');
+	font-weight: 100 1000;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway-Italic.woff2') format('woff2 supports variations'), url('Raleway-Italic.woff2') format('woff2-variations');
+	font-style: italic;
+	font-weight: 100 1000;
+}
+
+:root {
+	--heading-font-stack: 'DancingScript', cursive;
+	--body-font-stack: 'Raleway', sans-serif;
+	--content-width: 600px;
+	--background-color: #fff;
+	--text-color: #040404;
+	--border-color: #333;
+	--subtle-color: #aaa;
+	--anchor-color: #48d;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #444;
+		--text-color: #f3f3f3;
+		--border-color: #888;
+		--subtle-color: #777;
+		--anchor-color: #6af;
+	}
+}
+
+body {
+	padding: 1rem;
+	font-family: var(--body-font-stack);
+	line-height: 1.5;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	user-select: none;
+}
+
+header, main, footer {
+	max-width: 600px;
+	margin: 4rem auto;
+}
+
+header {
+	text-align: center;
+}
+
+header > img {
+	width: 100%;
+	border: 1px solid var(--border-color);
+	padding: 8px;
+}
+
+h1, h2 {
+	font-family: var(--heading-font-stack);
+	font-weight: 900;
+}
+
+h2 > img:first-child {
+	width: 90px;
+	vertical-align: middle;
+	border-radius: 100%;
+	margin-right: 0.8rem;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
+}
+
+section {
+	break-inside: avoid;
+}
+
+nav > a {
+	display: block;
+}
+
+a {
+	color: var(--anchor-color);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	color: var(--subtle-color);
+}
